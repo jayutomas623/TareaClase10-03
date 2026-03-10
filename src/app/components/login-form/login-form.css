@@ -1,54 +1,82 @@
 .card {
   width: 320px;
-  padding: 30px;
-  background: white;
+  padding: 36px 28px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 16px;
-  color: black;
+  backdrop-filter: blur(16px);
+  color: white;
 }
 
 h2 {
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 24px;
   text-align: center;
-  margin-bottom: 20px;
-  font-family: sans-serif;  
 }
 
-/* Campo */
 .field {
   position: relative;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .field input {
   width: 100%;
-  padding: 10px 35px;
+  padding: 11px 36px 11px 36px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 8px;
-  border: 1px solid rgba(255,255,255,0.2);
-  background: transparent;
   color: white;
+  font-size: 14px;
+  outline: none;
+}
+
+.field input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.field input:focus {
+  border-color: #00f5c8;
 }
 
 .icon {
   position: absolute;
-  left: 10px;
-  top: 50%;
+  left: 11px; top: 50%;
   transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.4);
+  pointer-events: none;
 }
 
 .eye {
   position: absolute;
-  right: 10px;
-  top: 50%;
+  right: 11px; top: 50%;
   transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.4);
   cursor: pointer;
 }
 
-/* Botón */
+.field:hover input {
+  border-color: rgba(0, 245, 200, 0.5);
+}
+
+.field:hover .icon {
+  color: #00f5c8;
+}
+
 button {
   width: 100%;
-  padding: 10px;
+  margin-top: 8px;
+  padding: 12px;
+  background: #00f5c8;
   border: none;
   border-radius: 8px;
-  background: #00f5c8;
-  font-weight: bold;
+  color: #050a1a;
+  font-size: 14px;
+  font-weight: 600;
   cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
 }

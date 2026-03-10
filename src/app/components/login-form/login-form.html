@@ -1,8 +1,7 @@
-<div class="card">
+
+<div #loginCard class="card">
 
   <h2>Iniciar Sesión</h2>
-
-  <!-- Usuario -->
   <div class="field">
     <span class="icon">
       <svg width="16" height="16" viewBox="0 0 24 24"
@@ -14,10 +13,10 @@
     <input
       type="text"
       placeholder="Usuario"
-      [(ngModel)]="username"/>
+      [(ngModel)]="username"
+      autocomplete="off"/>
   </div>
 
-  <!-- Contraseña -->
   <div class="field">
     <span class="icon">
       <svg width="16" height="16" viewBox="0 0 24 24"
@@ -29,7 +28,8 @@
     <input
       [type]="passwordVisible ? 'text' : 'password'"
       placeholder="Contraseña"
-      [(ngModel)]="password"/>
+      [(ngModel)]="password"
+      autocomplete="off"/>
     <span class="eye" (click)="togglePassword()">
       <svg *ngIf="!passwordVisible" width="15" height="15" viewBox="0 0 24 24"
         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
@@ -39,13 +39,14 @@
       <svg *ngIf="passwordVisible" width="15" height="15" viewBox="0 0 24 24"
         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
         <line x1="1" y1="1" x2="23" y2="23"/>
-        <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/>
-        <path d="M6.53 6.53A10.07 10.07 0 0 0 1 12s4 8 11 8a10 10 0 0 0 5.47-1.53"/>
+        <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8
+                 a18.5 18.5 0 0 1-2.16 3.19"/>
+        <path d="M6.53 6.53A10.07 10.07 0 0 0 1 12s4 8 11 8
+                 a10 10 0 0 0 5.47-1.53"/>
       </svg>
     </span>
   </div>
 
-  <!-- Botón -->
   <button (click)="onLogin()">Ingresar</button>
 
 </div>
