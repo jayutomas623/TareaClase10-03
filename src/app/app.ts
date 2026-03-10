@@ -1,12 +1,10 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { BackgroundComponent } from './components/background/background';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  standalone: true,
+  imports: [BackgroundComponent],
+  template: `<app-background></app-background>`
 })
-export class App {
-  protected readonly title = signal('login-360');
-}
+export class AppComponent {}
